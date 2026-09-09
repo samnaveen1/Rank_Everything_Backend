@@ -26,3 +26,13 @@ The API runs at `http://localhost:4000` by default.
 - `POST /api/ai/suggestions`
 
 The AI endpoint is optional and requires an OpenAI-compatible provider configured in `.env`.
+
+## Vercel deployment
+
+This repository includes a Vercel catch-all function at `api/[...path].ts` for the health, rankings, and todos endpoints. The existing `src/server.ts` remains available for local development.
+
+1. Rotate the MongoDB Atlas database password if it has ever been shared.
+2. Push this backend repository to GitHub without committing `.env`.
+3. Import the repository into Vercel as an `Other` project.
+4. Add `MONGODB_URI`, `MONGODB_DB_NAME`, and `CORS_ORIGIN=*` in Vercel environment variables.
+5. Deploy and test `/api/health`, `/api/rankings`, and `/api/todos`.
