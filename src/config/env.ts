@@ -18,6 +18,7 @@ export const env = {
     .split(",")
     .map((origin) => origin.trim())
     .filter(Boolean),
+  currentUserHandle: process.env.CURRENT_USER_HANDLE?.trim() || "sam",
   aiApiUrl: process.env.AI_API_URL?.trim() || undefined,
   aiApiKey: process.env.AI_API_KEY?.trim() || undefined,
   aiModel: process.env.AI_MODEL?.trim() || undefined,

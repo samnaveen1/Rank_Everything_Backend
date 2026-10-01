@@ -1,4 +1,4 @@
-# Rank Everything API
+# RANK.io API
 
 Fastify + TypeScript API for the Expo app. MongoDB Atlas is accessed only from this server; never put `MONGODB_URI` or `AI_API_KEY` in the Expo app.
 
@@ -24,6 +24,21 @@ The API runs at `http://localhost:4000` by default.
 - `PATCH /api/rankings/:id`
 - `DELETE /api/rankings/:id`
 - `POST /api/ai/suggestions`
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `POST /api/auth/google`
+- `POST /api/auth/logout`
+- `GET /api/auth/me`
+
+### Development test account
+
+Run `npm run seed` against the local development database, then use:
+
+- Email: `test@rank.io`
+- Username: `samtest`
+- Password: `Rank.ioDemo@123`
+
+This account is for local development only. Never use these credentials in production.
 
 The AI endpoint is optional and requires an OpenAI-compatible provider configured in `.env`.
 

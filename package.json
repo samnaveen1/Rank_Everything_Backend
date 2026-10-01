@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "seed": "tsx src/seed/seed.ts",
     "build:local": "tsc -p tsconfig.json",
     "build:vercel": "tsc -p tsconfig.vercel.json",
     "start": "node dist/server.js"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.0",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.2.2",
     "fastify": "^5.5.0",
     "mongodb": "^6.19.0"
